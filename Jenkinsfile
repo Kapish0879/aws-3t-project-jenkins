@@ -11,8 +11,8 @@ pipeline
     // }
     environment {
         
-        IMAGE_NAME_FRONTEND = '964742912902.dkr.ecr.us-east-1.amazonaws.com/dev/project:frontend-$BUILD_NUMBER'
-        IMAGE_NAME_BACKEND = '964742912902.dkr.ecr.us-east-1.amazonaws.com/dev/project:backend-$BUILD_NUMBER'
+        IMAGE_NAME_FRONTEND = "964742912902.dkr.ecr.us-east-1.amazonaws.com/dev/project:frontend-$BUILD_NUMBER"
+        IMAGE_NAME_BACKEND = "964742912902.dkr.ecr.us-east-1.amazonaws.com/dev/project:backend-$BUILD_NUMBER"
 
         
     }
@@ -66,9 +66,9 @@ pipeline
     
                     docker images
     
-                    docker build -t ${IMAGE_NAME_FRONTEND} -f web-tier/Dockerfile web-tier/'
+                    docker build -t ${IMAGE_NAME_FRONTEND} -f web-tier/Dockerfile web-tier/
     
-                    docker build -t ${IMAGE_NAME_BACKEND} -f app-tier/Dockerfile app-tier/'
+                    docker build -t ${IMAGE_NAME_BACKEND} -f app-tier/Dockerfile app-tier/
         
                     echo "Docker Images Built Successfully!!"
         
